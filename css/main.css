@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  float: left;
+}
+
+h1 {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    float: left;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#main {
+    background: rgb(203, 203, 203);
+  }
+  
+  #main>section {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  body {
+    margin: 0;
+  }
+section:not(.main){
+    float: right;
+    width: 80%;
+}
+header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #777;
+    height: 100px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #060606;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ .topnav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+ }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(208, 13, 13);
+  }
+
+  .sidenav a {
+    float: left;
+    color: #060606;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ .sidenav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+ }
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: rgb(208, 13, 13);
+  }
+
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  article {
+    float: left;
+    padding: 10px;
+    width: 40%;
+    background-color: #b0d0d6;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: solid;
+    border-color: #060606;
+    outline: 10px;
+    height: auto;
+  }
+
+  img {
+    float: right;
+    width: 30%;
+    height: auto;
+  }
+
+  .row {
+    clear: both;
+  }
+  
+
+  article:after {
+    margin-bottom: 10px;
+    background-color: #ddd;
+    display: table;
+    clear: both;
+  }
+
+  @media (max-width: 600px) {
+    nav,
+    article,
+    aside {
+      width: 100%;
+      height: auto;
+    }
+  
+    #articles {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+
+  footer {
+    float: left;
+    width: 100%;
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }

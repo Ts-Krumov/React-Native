@@ -1,0 +1,13 @@
+{  "name": "blog",
+"version": "1.0.0",
+"description": "blog",
+"main": "index.js",
+"author": "Tsvetomir Krumov",
+"license": "Apache-2.0",
+"scripts": {
+ "start": "lite-server"
+},
+"devDependencies": {
+  "lite-server": "^2.6.1"
+}
+}
