@@ -1,0 +1,9 @@
+{
+  "name": "task-03-js",
+  "version": "1.0.0",
+  "description": "ECMAScript 6+ novelties demo",
+  "main": "index.js",
+  "repository": "https://github.com/Ts-Krumov/React-Native.git",
+  "author": "Tsvetomir Krumov",
+  "license": "Apache-2.0"
+}
