@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  width: 80%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background: #EAE7DC;
+}
+
+nav .topnav {
+  background-color:#D8C3A5:
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background-color:#D8C3A5;
+  color: black;
+}
+ 
+nav {
+  display: flex;
+  background-color:#baa88f:
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+nav a:hover {
+  background-color: #e85a4f;;
+  color: black;
+}
+
+.row {
+  display: flex;
+  row-gap: 10px;
+}
+
+  article {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 10px;
+    width: 40%;
+    border: 1px solid black;
+    margin: 5px;
+  }
+
+article img {
+  width: 30%;
+  height: auto;
+  padding-right: 10px;
+ }
+
+article h1, article h2 {
+  flex: 100%;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  background: rgb(228, 230, 230);
+  border: 1px dashed black;
+}
+section{
+  display: flex;
+  flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+section p {
+    width:70%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+  }
+
+form {
+  width: 100%;
+  height: auto;
+}
+aside {
+  width: 20%;
+    display: flex;
+    border-left: 1px dashed rgb(0, 0, 0);
+    padding-left: 5px;
+    text-align: center;
+    background:  #EAE7DC;
+
+}
+
+h1{
+  text-align: center;
+  width: 100%;
+}
+
+aside.example form{
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(66, 184, 208);
+  color: black;
+  text-align: center;
+}
+
+aside.example button{
+float: left;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 960px) {
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
