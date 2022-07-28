@@ -1,8 +1,9 @@
-const fibo =(num1 = 0, num2 = 1, last=100) => ({
+const fibo =(last=1000) => ({
     [Symbol.iterator](){
-        
+        num1 = 0, num2 = 1;
         return{
             next(){
+                
                 [num1, num2] = [num2, num1 + num2];
                 return {
                     value: num1, num2,

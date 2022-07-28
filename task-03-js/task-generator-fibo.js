@@ -1,15 +1,15 @@
-const fiboGen = (first =0, next = 1, last = 100) => ({
+const fiboGen = (number = 1000) => ({
     *[Symbol.iterator]()  { 
-        for(let i = first; i <last; i ++){
-            var temp = first;
+        let first = 0, next =1;
+        for(let i = 0; i < number; i ++){
+            let temp = first;
             first = next;
             next+=temp;
-            if(next < last) yield next;
+            if(next < number) yield next;
         }
     }
 })
 
-for(const number of fiboGen()){
-    console.log(number);
+for(const n of fiboGen()){
+    console.log(n);
 }
-        
