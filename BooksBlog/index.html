@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <h1>My Books</h1>
+      <h1>Books Library</h1>
     </header>
 
     <nav class="topnav">
@@ -23,9 +23,9 @@
       </main>
       <aside>
         
-        <form class="example" action="books-fetch.js">
+        <form class="example" onsubmit="handleSubmit(event)">
           <h1>Search for a Book:</h1>
-          <input type="text" placeholder="Search..." name="search">
+          <input id="search" type="text" placeholder="Search..." name="search">
           <button type="submit"><i class="search">Find</i></button>
         </form>
       </aside>

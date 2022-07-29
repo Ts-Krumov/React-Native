@@ -2,3 +2,17 @@ img {
     height: 600px;
     width: auto;
 }
+
+#results {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 2em;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

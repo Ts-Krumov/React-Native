@@ -6,25 +6,37 @@ main {
   width: 80%;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  background: #EAE7DC;
+  align-content: flex-start;
+  background-color: #FFFFF3;
 }
 
 nav .topnav {
-  background-color:#bc9c70;
+  background-color:#a7bea9;
 }
 
 header {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
   padding: 60px;
-  text-align: center;
-  background-color:#D8C3A5;
-  color: black;
+  background-color:#a7bea9;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-position: center;
+  background-image: url(https://media.istockphoto.com/photos/row-of-colorful-library-books-isolated-on-white-background-picture-id508661258?k=20&m=508661258&s=170667a&w=0&h=e_cwx9FDl8A_bxeFsKkSHtLm0m3l5gqsZYfSXwFS398=);
 }
- 
+header h1{
+  background-color: #FFFFF3;
+  padding: 0;
+  margin: 0;
+}
 nav {
   display: flex;
-  background-color:#baa88f:
+  background-color:#baa88f;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  color: #000;
 }
 
 nav a {
@@ -33,12 +45,13 @@ nav a {
   text-align: center;
   padding: 15px 20px;
   width: 100%;
-  background-color: #bc9c70;
+  text-transform: uppercase;
+  background-image: url(https://previews.123rf.com/images/zoomzoom/zoomzoom2001/zoomzoom200100036/136858852-light-wooden-planks-with-smooth-surface-wood-texture-and-background.jpg);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 nav a:hover {
-  background-color: #e85a4f;;
-  color: black;
+  background-color: #889d8a;
 }
 
 .row {
@@ -52,7 +65,9 @@ nav a:hover {
     row-gap: 10px;
     width: 40%;
     border: 1px solid black;
-    margin: 5px;
+    margin: 10px;
+    background-color: #faf2c3;
+    border-radius: 5px;
   }
 
 article img {
@@ -67,19 +82,19 @@ article h1, article h2 {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: left;
-  background: rgb(228, 230, 230);
-  border: 1px dashed black;
-  text-decoration: none;
+  font-family:'Rasa', serif;
+  background: #f6e4ad;
+
 }
 section{
   display: flex;
-  flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 section p {
     width:70%;
     height: auto;
+    padding-bottom: 10px;
 }
 
 .row {
@@ -96,8 +111,9 @@ aside {
     display: flex;
     border-left: 1px dashed rgb(0, 0, 0);
     padding-left: 5px;
+    padding-bottom: 10px;
     text-align: center;
-    background:  #EAE7DC;
+    background: #FFFFF3;
 
 }
 
@@ -113,9 +129,10 @@ aside.example form{
 
 footer {
   width: 100%;
-  background-color: rgb(66, 184, 208);
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
+  
 }
 
 aside.example button{

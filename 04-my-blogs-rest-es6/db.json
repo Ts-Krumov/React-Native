@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "content": "JSON Server is easy...",
+      "tags": [
+        "json-server",
+        "rest",
+        "api"
+      ],
+      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
+      "authorID": 1
+    },
+    {
+      "id": 2,
+      "title": "Rest Client Super Advanced",
+      "content": "Rest Client is relatively easy...",
+      "tags": [
+        "rest",
+        "rest-client",
+        "http",
+        "easy"
+      ],
+      "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
+      "authorID": 1
+    },
+    {
+      "title": "Using Rest Client",
+      "content": "Using Rest Client is easy...",
+      "tags": [
+        "rest",
+        "rest-client",
+        "http",
+        "cru"
+      ],
+      "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
+      "authorID": 1,
+      "id": 3
+    },
+    {
+      "title": "Async/Await vs Promises",
+      "content": "Async/Await syntax may look easy to learn...",
+      "tags": [
+        "async",
+        "promise",
+        "await",
+        "javascript"
+      ],
+      "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
+      "authorID": 1,
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Smith",
+    "username": "john",
+    "password": "john123",
+    "role": "ADMIN"
+  }
+}
