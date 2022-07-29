@@ -10,7 +10,7 @@ main {
 }
 
 nav .topnav {
-  background-color:#D8C3A5:
+  background-color:#bc9c70;
 }
 
 header {
@@ -33,6 +33,7 @@ nav a {
   text-align: center;
   padding: 15px 20px;
   width: 100%;
+  background-color: #bc9c70;
 }
 
 nav a:hover {
@@ -68,6 +69,7 @@ article h1, article h2 {
   text-align: left;
   background: rgb(228, 230, 230);
   border: 1px dashed black;
+  text-decoration: none;
 }
 section{
   display: flex;

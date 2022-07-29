@@ -12,7 +12,6 @@ function genBook(book) {
     </p>
     </section>
     `
-
 return art;
   }
 
