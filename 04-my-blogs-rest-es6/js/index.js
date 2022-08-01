@@ -24,7 +24,7 @@ export function showPosts(posts) {
 
 export function addPost(post){
     const postsElem = document.createElement('article');
-    postsElem.className = "col s12 m4";
+    postsElem.className = "col s12 m6 l4";
     postsElem.innerHTML = `
     <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
