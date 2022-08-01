@@ -33,6 +33,7 @@ async function init(searchText) {
     console.log("Demo finished");
   }
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   const searchValue = document.getElementById("search").value;
