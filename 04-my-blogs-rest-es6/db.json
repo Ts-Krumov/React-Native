@@ -50,6 +50,28 @@
       "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
       "authorID": 1,
       "id": 5
+    },
+    {
+      "title": "New Post",
+      "authorID": "1",
+      "content": "Text for the new post",
+      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
+      "tags": [
+        "new",
+        "post"
+      ],
+      "id": 6
+    },
+    {
+      "title": "ss",
+      "authorId": "1",
+      "content": "sdded",
+      "imageUrl": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "tags": [
+        "python",
+        "blog"
+      ],
+      "id": 22
     }
   ],
   "comments": [

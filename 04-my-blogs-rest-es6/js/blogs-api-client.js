@@ -10,5 +10,38 @@ export async function getAllPosts() {
     } catch(err) {
         return Promise.reject(err);
     }
+}
+export async function addNewPost(post) {
+    try {
+        const postResp = await fetch(API_BASE_URL, {
+            method: 'POST',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(post)
+        });
+        if(postResp.status >= 400){
+            return Promise.reject(postResp.body);
+        }
+        return postResp.json();
+    } catch(err) {
+        return Promise.reject(err);
+    }
+}
+
+export async function delPost(post) {
+    try {
+        const postResp = await fetch(`${API_BASE_URL}/${post.id}`, {
+            method: "DELETE",
+        });
+        if(postResp.status >= 400){
+            return Promise.reject(postResp.body);
+        }
+        return postResp.json();
+    } catch (err) {
+        return Promise
+    }
+    
     
 }
+
