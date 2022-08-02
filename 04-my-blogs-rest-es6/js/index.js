@@ -1,5 +1,7 @@
-import { addNewPost, delPost, getAllPosts } from './blogs-api-client.js';
+import { addNewPost, delPost, getAllPosts, editPost } from './blogs-api-client.js';
 import { chipsInstances } from './materialize-helpers.js';
+
+let ALL_POSTS = [];
 
 const postsSection = document.getElementById("posts");
 const erorrsDiv = document.getElementById("errors");
@@ -11,6 +13,7 @@ addPostForm.addEventListener('reset', resetForm);
 async function init() {
   try {
     const allPosts = await getAllPosts();
+    ALL_POSTS = allPosts;
     showPosts(allPosts);
   } catch (err) {
     showError(err);
@@ -56,6 +59,7 @@ export function addPost(post) {
     `;
   postsSection.insertAdjacentElement("beforeend", postElem);
   postElem.querySelector('#delete').addEventListener('click', event => deletePost(post.id))
+  postElem.querySelector('#edit').addEventListener('click', event => editThisPost(post.id))
 }
 
 async function handleSubmitPost(event) {
@@ -90,5 +94,10 @@ export function deletePost(postId) {
     delPost(article);
   }
 
+
+export function editThisPost(postId) {
+  const editedPost = ALL_POSTS.find(post => post.id === postId);
+  console.log(editedPost);
+  }
 
 init()

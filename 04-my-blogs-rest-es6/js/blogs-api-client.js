@@ -1,4 +1,4 @@
-const API_BASE_URL = " http://localhost:3000/api/posts";
+const API_BASE_URL = " http://localhost:4000/api/posts";
 
 export async function getAllPosts() {
     try {
@@ -29,6 +29,24 @@ export async function addNewPost(post) {
     }
 }
 
+export async function editPost(post) {
+    try {
+        const postResp = await fetch(`${API_BASE_URL}/${post.id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(post)
+        });
+        if(postResp.status >= 400){
+            return Promise.reject(postResp.body);
+        }
+        return postResp.json();
+    } catch(err) {
+        return Promise.reject(err);
+    }
+}
+
 export async function delPost(post) {
     try {
         const postResp = await fetch(`${API_BASE_URL}/${post.id}`, {
@@ -44,4 +62,3 @@ export async function delPost(post) {
     
     
 }
-

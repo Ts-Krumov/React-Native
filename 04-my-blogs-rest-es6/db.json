@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "content": "JSON Server is easy...",
-      "tags": [
-        "json-server",
-        "rest",
-        "api"
-      ],
-      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
-      "authorID": 1
-    },
-    {
       "id": 2,
       "title": "Rest Client Super Advanced",
       "content": "Rest Client is relatively easy...",
@@ -39,48 +27,30 @@
       "id": 3
     },
     {
-      "title": "Async/Await vs Promises",
-      "content": "Async/Await syntax may look easy to learn...",
-      "tags": [
-        "async",
-        "promise",
-        "await",
-        "javascript"
-      ],
-      "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
-      "authorID": 1,
-      "id": 5
-    },
-    {
-      "title": "New Post",
-      "authorID": "1",
-      "content": "Text for the new post",
-      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
-      "tags": [
-        "new",
-        "post"
-      ],
-      "id": 6
-    },
-    {
-      "title": "ss",
+      "title": "Python logo",
       "authorId": "1",
-      "content": "sdded",
+      "content": "This is the python logo",
       "imageUrl": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
       "tags": [
         "python",
+        "programming",
         "blog"
       ],
-      "id": 22
-    }
-  ],
-  "comments": [
+      "id": 23
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "JSON Logo",
+      "authorId": "1",
+      "content": "This is the JSON logo...",
+      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
+      "tags": [
+        "json",
+        "logo"
+      ],
+      "id": 24
     }
   ],
+  "comments": [],
   "users": {
     "id": 1,
     "firstName": "John",
