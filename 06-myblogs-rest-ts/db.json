@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "content": "JSON Server is easy ...",
+      "tags": [
+        "json-server",
+        "rest",
+        "api"
+      ],
+      "imageUrl": "https://dz2cdn1.dzone.com/storage/temp/8746383-json-server.png",
+      "authorId": 1
+    },
+    {
+      "title": "Promises vs. Async/Await",
+      "content": "Async and await syntax is easy to learn ...",
+      "tags": [
+        "async",
+        "await",
+        "promise",
+        "javascript"
+      ],
+      "imageUrl": "https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.0/1655829100763/Microsoft.VisualStudio.Services.Icons.Default",
+      "authorId": 1,
+      "id": 4
+    },
+    {
+      "title": "wdedew",
+      "authorId": "1",
+      "content": "dwqdw",
+      "imageUrl": "https://assets.logitech.com/assets/64683/performance-mouse-mx.png",
+      "tags": [
+        "saddas",
+        "asdasd"
+      ],
+      "id": 8
+    },
+    {
+      "title": "ddddd",
+      "content": "ddddddd",
+      "tags": [
+        "aaa",
+        "bbb"
+      ],
+      "imageUrl": "http://doctorakil.com/wp-content/uploads/2018/01/coffee-940x600.jpg",
+      "authorId": 1,
+      "id": 23
+    },
+    {
+      "title": "This NEW",
+      "content": "the text of the new post...",
+      "tags": [
+        "new",
+        "post"
+      ],
+      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
+      "authorId": 1,
+      "id": 24
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "username": "john",
+      "password": "john123",
+      "role": "ADMIN"
+    }
+  ]
+}

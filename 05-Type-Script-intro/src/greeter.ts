@@ -1,9 +1,9 @@
 
-function greeter(name = 'Anonimous', date: Date = new Date()): string {
-    return `Hello ${name} from TypeScript on ${date.toDateString()}`;
-}
+// function greeter(name = 'Anonimous', date: Date = new Date()): string {
+//     return `Hello ${name} from TypeScript on ${date.toDateString()}`;
+// }
 
-document.getElementById('results')!.innerHTML = greeter('Tsvetomir', new Date("2000-10-31T01:30:00.000-05:00"));
+// document.getElementById('results')!.innerHTML = greeter('Tsvetomir', new Date("2000-10-31T01:30:00.000-05:00"));
 
 //type Guard
 // const elem = document.getElementById('results');
@@ -77,18 +77,6 @@ if (isFish(pet)) {
   pet.fly();
 }
 
-type Point = {
-    x: number;
-    y: number;
-  };
-   
-  // Exactly the same as the earlier example
-  function printCoord(pt: Point) {
-    console.log("The coordinate's x value is " + pt.x);
-    console.log("The coordinate's y value is " + pt.y);
-  }
-   
-  printCoord({ x: 100, y: 5 });
 
   interface Square {
     kind: "square";
