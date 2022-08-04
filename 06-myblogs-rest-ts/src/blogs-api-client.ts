@@ -1,4 +1,4 @@
-import { Post, PostCreateDto  } from "./posts.js";
+import { Post, PostCreateDto } from "./posts.js";
 import { IdType } from "./shared-types.js";
 
 const API_BASE_URL = "http://localhost:4000/api/posts";
@@ -32,7 +32,7 @@ class BlogApiClientImpl implements BlogsApiClient {
     }
 
     async updatePost(post: Post): Promise<Post> {
-        return this.handleRequest(API_BASE_URL, {
+        return this.handleRequest(`${API_BASE_URL}/${post.id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -61,4 +61,3 @@ class BlogApiClientImpl implements BlogsApiClient {
 }
 
 export const BlogsAPI: BlogsApiClient = new BlogApiClientImpl();
-

@@ -26,37 +26,26 @@
       "id": 4
     },
     {
-      "title": "wdedew",
-      "authorId": "1",
-      "content": "dwqdw",
-      "imageUrl": "https://assets.logitech.com/assets/64683/performance-mouse-mx.png",
+      "title": "mouse",
+      "content": "black computer mouse",
       "tags": [
-        "saddas",
-        "asdasd"
+        "mouse",
+        "hardware"
       ],
+      "imageUrl": "https://assets.logitech.com/assets/64683/performance-mouse-mx.png",
+      "authorId": 1,
       "id": 8
     },
     {
-      "title": "ddddd",
-      "content": "ddddddd",
+      "title": "coffee",
+      "content": "cup of coffee",
       "tags": [
-        "aaa",
-        "bbb"
+        "coffee",
+        "post"
       ],
       "imageUrl": "http://doctorakil.com/wp-content/uploads/2018/01/coffee-940x600.jpg",
       "authorId": 1,
       "id": 23
-    },
-    {
-      "title": "This NEW",
-      "content": "the text of the new post...",
-      "tags": [
-        "new",
-        "post"
-      ],
-      "imageUrl": "https://miro.medium.com/max/800/1*tX7DC-HhKR2blBSbf3xvtQ.jpeg",
-      "authorId": 1,
-      "id": 24
     }
   ],
   "comments": [
