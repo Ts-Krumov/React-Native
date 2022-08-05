@@ -61,3 +61,4 @@ class BlogApiClientImpl implements BlogsApiClient {
 }
 
 export const BlogsAPI: BlogsApiClient = new BlogApiClientImpl();
+
