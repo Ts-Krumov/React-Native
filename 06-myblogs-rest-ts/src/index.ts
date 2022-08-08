@@ -1,17 +1,8 @@
-import { ValidationConfig, ValidationResult } from './validate';
+import { ValidationConfig, ValidationResult, FormFieldState, ValidStatus, ChangedStatus } from './validate.js';
 import { AppStateStore } from './state-store.js';
 import { BlogsAPI } from './blogs-api-client.js';
 import { Post } from './posts.js';
-import { IdType } from './shared-types.js';
-
-
-// interface BlogControllerType {
-//   postsSection: HTMLElement;
-//   erorrsDiv: HTMLElement;
-//   addPostForm: HTMLFormElement;
-//   resetButton: HTMLButtonElement;
-//   init(): Promise<void>;
-// }
+import { FormFieldDict, IdType } from './shared-types.js';
 
 
 class BlogsController {
@@ -32,6 +23,16 @@ class BlogsController {
     } catch (err) {
       this.showError(err);
     }
+
+    this.initFormState(this.addPostForm);
+  }
+
+  initFormState(formElement: HTMLFormElement) {
+    const formData = new FormData(formElement);
+    const np: FormFieldDict<FormFieldState> = {};
+    formData.forEach((value, key) => {
+      np[key] = new FormFieldState(ValidStatus.INVALID, ChangedStatus.PRISTINE);
+    })
   }
 
   showPosts(posts: Post[]) {
@@ -39,8 +40,12 @@ class BlogsController {
   }
 
   showError(err: any) {
+    if(!err) {
+      this.erorrsDiv.innerHTML = ''
+    } else {
     this.erorrsDiv.innerHTML = `<div>${err}</div>`;
   }
+}
 
   addPostDOM(post: Post) {
     const postElem = document.createElement('article');
@@ -71,7 +76,7 @@ class BlogsController {
       </div>
       <div class="card-action">
         <button class="btn waves-effect waves-light" type="button" id="edit${post.id}">Edit
-          <i class="material-icons right">send</i>
+          <i class="material-icons right">settings</i>
         </button>
         <button class="btn waves-effect waves-light red lighten-1" type="button" id="delete${post.id}">Delete
           <i class="material-icons right">clear</i>
@@ -122,14 +127,11 @@ class BlogsController {
 
   getPostFormSnapshot(): Post {
     const formData = new FormData(this.addPostForm);
-    type PostDict = {
-      [key: string]: string
-    };
-    const np: PostDict = {};
+    const np: FormFieldDict<string> = {};
     formData.forEach((value, key) => {
       np[key] = value.toString();
     })
-    return new Post(np.title, np.content, np.tags.split(/\W+/), np.imageUrl, parseInt(np.authorId) || 1, parseInt(np.id));
+    return new Post(np.title, np.content, np.tags.split(/\W+/), np.imageUrl, np.authorId ? parseInt(np.authorId): undefined , parseInt(np.id));
   }
 
   resetForm = () => {
@@ -156,12 +158,25 @@ class BlogsController {
     let field: keyof ValidationConfig<Post>;
     for (field in config) {
       const validator = config[field];
-      if(validator !== undefined) {
+      if(validator !== undefined){
+      if(Array.isArray(validator)){
+        for(const element of validator){
+          try{
+            element(formSnapshot[field]!.toString(), field);
+          } catch(err) {
+            if(validationResult[field]=== undefined){
+              validationResult[field] = [] as Array<string>;
+            }
+            validationResult[field]!.push(err as string);
+          }
+        }
+      } else {
         try{
           validator(formSnapshot[field]!.toString(), field);
         } catch(err) {
           validationResult[field] = [err as string];
         }
+      }
       }
     }
     this.showValidationErrors(validationResult);
@@ -178,7 +193,7 @@ class BlogsController {
         }
       }
     }
-    this.showError(AppStateStore.postFormErrors);
+    this.showError(AppStateStore.postFormErrors.join(''));
   }
 }
 

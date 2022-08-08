@@ -40,29 +40,34 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="title" name="title" type="text" class="validate">
+                            <input id="title" name="title" type="text" class="validate invalid">
                             <label for="title">Blog Title</label>
+                            <span class="helper-text" data-error="Blog Title must be between 3 and 10 characters long" ></span>
                         </div>
                         <div class="input-field col s6">
-                            <input id="authorId" name="authorId" type="text" class="validate">
+                            <input id="authorId" name="authorId" type="text" class="validate invalid">
+                            <span class="helper-text" data-error="The field can be only a Number" ></span>
                             <label for="authorId">Author ID</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                            <textarea id="content" name="content" type="text" class="materialize-textarea"></textarea>
+                            <span class="helper-text" data-error="The Post Text must be between 10 and 200 characters long"></span>
                             <label for="content">Post Text</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="imageUrl" name="imageUrl" type="url" class="validate">
+                            <input id="imageUrl" name="imageUrl" type="url" class="validate invalid">
+                            <span class="helper-text" data-error="Invalid Image URL"></span>
                             <label for="imageUrl">Blog Image URL</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="tags" name="tags" type="text" class="tags">
+                            <span class="helper-text" data-error="wrong"></span>
                             <label for="tags">Tags</label>
                         </div>
                     </div>

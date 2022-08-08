@@ -59,6 +59,18 @@
       "imageUrl": "https://www.publicdomainpictures.net/pictures/40000/velka/robin-bird.jpg",
       "authorId": 1,
       "id": 24
+    },
+    {
+      "title": "Python Post",
+      "content": "The latest post is here...Check it out >>",
+      "tags": [
+        "new",
+        "post",
+        "python"
+      ],
+      "imageUrl": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "authorId": 1,
+      "id": 25
     }
   ],
   "comments": [
