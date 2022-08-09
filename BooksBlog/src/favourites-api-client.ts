@@ -1,7 +1,7 @@
-import { Book } from "./google-books-api-types";
-import { IdType } from "./shared-types";
+import { Book } from "./google-books-api-types.js";
+import { IdType } from "./shared-types.js";
 
-const API_BASE_URL = "http://localhost:4000/api/posts";
+export const API_BASE_URL = "http://localhost:4000/books";
 
 
 export interface BooksApiClient {
@@ -14,7 +14,9 @@ export class BooksApiClientImpl implements BooksApiClient {
     getAllFavourites(): Promise<Book[]> {
        return this.handleRequest(API_BASE_URL);
     }
-    addToFavourites(book: Book): Promise<Book> {
+    async addToFavourites(book: Book): Promise<Book> {
+       
+        
         return this.handleRequest(API_BASE_URL, {
             method: 'POST',
             headers: {

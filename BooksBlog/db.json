@@ -1,0 +1,301 @@
+{
+  "books": [
+    {
+      "kind": "books#volume",
+      "id": "c4sIJMJhd84C",
+      "etag": "eT3q60qJEvA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/c4sIJMJhd84C",
+      "volumeInfo": {
+        "title": "Въведение в програмирането с Java",
+        "authors": [
+          "Светлин Наков и колектив"
+        ],
+        "publisher": "Faber Publishing",
+        "publishedDate": "2009-10-20",
+        "description": "Безплатната книга \"Въведение в програмирането с Java\" предоставя на начинаещите програмисти стабилна основа от фундаментални знания без значение от езика за програмиране. Тя обхваща фундаменталните основи на програмирането, които не са се променили съществено през последните 10-15 години. Учебното съдържание е разработено от авторитетен авторски колектив под ръководството на Светлин Наков от Софтуерния университет (СофтУни) и покрива както начални теми като променливи, условни конструкции, цикли и масиви, така и по-сложни концепции като структури от данни (списъци, стекове, опашки, дървета, хеш-таблици и други), рекурсия и рекурсивни алгоритми, обектно-ориентирано програмиране и качествен програмен код. От книгата ще научите как да мислите и разсъждавате като програмисти и как ефективно и качествено да решавате задачи по програмиране. Ще овладеете фундаменталните принципи на програмирането и основните структури от данни и алгоритми, без които не можете да станете софтуерен инженер. Книгата е на български език с обем 962 страници и се разпространява безплатно в електронен формат, както и в печатен вариант на хартия. Официален уеб сайт: http://www.introprogramming.info/intro-java-book/",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789544000554"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9544000550"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 963,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.3.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=c4sIJMJhd84C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=c4sIJMJhd84C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "bg",
+        "previewLink": "http://books.google.com/books?id=c4sIJMJhd84C&printsec=frontcover&dq=java&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=c4sIJMJhd84C&dq=java&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/%D0%92%D1%8A%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80.html?hl=&id=c4sIJMJhd84C"
+      },
+      "saleInfo": {
+        "country": "BG",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "BG",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/%D0%92%D1%8A%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80-sample-pdf.acsm?id=c4sIJMJhd84C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=c4sIJMJhd84C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Безплатната книга &quot;Въведение в програмирането с Java&quot; предоставя на начинаещите програмисти стабилна основа от фундаментални ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "XCLhDwAAQBAJ",
+      "etag": "NZ2Nkph7/nw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/XCLhDwAAQBAJ",
+      "volumeInfo": {
+        "title": "React and React Native",
+        "subtitle": "A complete hands-on guide to modern web and mobile development with React.js, 3rd Edition",
+        "authors": [
+          "Adam Boduch",
+          "Roy Derks"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2020-04-30",
+        "description": "Get up to speed with React, React Native, GraphQL and Apollo for building cross-platform native apps with the help of practical examples Key Features Covers the latest features of React such as Hooks, Suspense, NativeBase, and Apollo in this updated third edition Get to grips with the React architecture for writing easy-to-manage web and mobile applications Understand GraphQL and Apollo for building a scalable backend for your cross-platform apps Book Description React and React Native, Facebook’s innovative User Interface (UI) libraries, are designed to help you build robust cross-platform web and mobile applications. This updated third edition is improved and updated to cover the latest version of React. The book particularly focuses on the latest developments in the React ecosystem, such as modern Hook implementations, code splitting using lazy components and Suspense, user interface framework components using Material-UI, and Apollo. In terms of React Native, the book has been updated to version 0.62 and demonstrates how to apply native UI components for your existing mobile apps using NativeBase. You will begin by learning about the essential building blocks of React components. Next, you’ll progress to working with higher-level functionalities in application development, before putting this knowledge to use by developing user interface components for the web and for native platforms. In the concluding chapters, you’ll learn how to bring your application together with a robust data architecture. By the end of this book, you’ll be able to build React applications for the web and React Native applications for multiple mobile platforms. What you will learn Delve into the React architecture, component properties, state, and context Get to grips with React Hooks for handling functions and components Implement code splitting in React using lazy components and Suspense Build robust user interfaces for mobile and desktop apps using Material-UI Write shared components for Android and iOS mobile apps using React Native Simplify layout design for React Native apps using NativeBase Write GraphQL schemas to power web and mobile apps Implement web and mobile components that are driven by Apollo Who this book is for This book is for any JavaScript developer who wants to start learning how to use Facebook’s UI libraries, React and React Native, for mobile and web application development. Although no prior knowledge of React is needed, working knowledge of JavaScript programming will help you understand the concepts covered in the book more effectively.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781839212437"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1839212438"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 526,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=XCLhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=XCLhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=XCLhDwAAQBAJ&printsec=frontcover&dq=react&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=XCLhDwAAQBAJ&dq=react&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/React_and_React_Native.html?hl=&id=XCLhDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BG",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "BG",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=XCLhDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "By the end of this book, you&#39;ll be able to build React applications for the web and React Native applications for multiple mobile platforms."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "274fCwAAQBAJ",
+      "etag": "sIlRQH4gGIg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/274fCwAAQBAJ",
+      "volumeInfo": {
+        "title": "Learning React Native",
+        "subtitle": "Building Native Mobile Apps with JavaScript",
+        "authors": [
+          "Bonnie Eisenman"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2015-12-03",
+        "description": "Get a practical introduction to React Native, the JavaScript framework for writing and deploying fully featured mobile apps that look and feel native. With this hands-on guide, you’ll learn how to build applications that target iOS, Android, and other mobile platforms instead of browsers. You’ll also discover how to access platform features such as the camera, user location, and local storage. With code examples and step-by-step instructions, author Bonnie Eisenman shows web developers and frontend engineers how to build and style interfaces, use mobile components, and debug and deploy apps. Along the way, you’ll build several increasingly sophisticated sample apps with React Native before putting everything together at the end. Learn how React Native provides an interface to native UI components Examine how the framework uses native components analogous to HTML elements Create and style your own React Native components and applications Install modules for APIs and features not supported by the framework Get tools for debugging your code, and for handling issues outside of JavaScript Put it all together with the Zebreto effective-memorization flashcard app Deploy apps to the iOS App Store and Google’s Play Store",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781491929070"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1491929073"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 272,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=274fCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=274fCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=274fCwAAQBAJ&pg=PA12&dq=react&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=274fCwAAQBAJ&dq=react&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Learning_React_Native.html?hl=&id=274fCwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BG",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "BG",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=274fCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In <b>React</b> Native, just as in <b>React</b>, we write our views using JSX, combining markup and the JavaScript that controls it into a single file. JSX met with strong <b>reactions</b> when <b>React</b> first debuted. For many web developers, the separation of&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "VUSbAgAAQBAJ",
+      "etag": "h14GDqpxdk8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/VUSbAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Java Generics and Collections",
+        "authors": [
+          "Maurice Naftalin",
+          "Philip Wadler"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2007",
+        "description": "This book, written by one of the designers of generics, is a thorough explanation of how to use generics, and particularly, the effect this facility has on the way developers use collections.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780596527754"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0596527756"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 273,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=VUSbAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=VUSbAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=VUSbAgAAQBAJ&printsec=frontcover&dq=java&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=VUSbAgAAQBAJ&dq=java&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Java_Generics_and_Collections.html?hl=&id=VUSbAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BG",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "BG",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=VUSbAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book, written by one of the designers of generics, is a thorough explanation of how to use generics, and particularly, the effect this facility has on the way developers use collections."
+      }
+    }
+  ]
+}
