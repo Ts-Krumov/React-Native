@@ -135,6 +135,10 @@ footer {
   
 }
 
+section button {
+  width: 20%;
+}
+
 aside.example button{
 float: left;
 width: 20%;

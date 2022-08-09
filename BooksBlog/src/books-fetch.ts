@@ -1,4 +1,6 @@
-function genBook(book) {
+import { Book } from "./google-books-api-types.js";
+
+export function genBook(book: Book) {
   const art = document.createElement("article");
   console.log(art);
   art.innerHTML = `
@@ -8,22 +10,23 @@ function genBook(book) {
     <img src="${book.volumeInfo.imageLinks.thumbnail}"></img>
     <p>${book.volumeInfo.description.slice(0,300)}
     </p>
+    <button id="favourites-button"> <i class="material-icons" style="font-size:36px">favorite</i></button>
     </section>
     `;
   return art;
 }
 
-async function init(searchText) {
+export async function init(searchText: string) {
   try {
-    const resultsElem = document.getElementById("results");
+    const resultsElem = document.getElementById("results") as HTMLElement;
     const booksResp = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
         searchText
-      )}&maxResults=15`
+      )}&maxResults=14`
     );
     const books = await booksResp.json();
     resultsElem.innerHTML='';
-    books.items.forEach((element) => {
+    books.items.forEach((element: Book) => {
       resultsElem.appendChild(genBook(element));
     });
     console.log(books);
@@ -34,8 +37,8 @@ async function init(searchText) {
   }
 }
 
-function handleSubmit(event) {
+export function handleSubmit(event: SubmitEvent) {
   event.preventDefault();
-  const searchValue = document.getElementById("search").value;
+  const searchValue = (document.getElementById("search")as HTMLInputElement)!.value;
   init(searchValue);
 }

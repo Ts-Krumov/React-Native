@@ -1,7 +1,7 @@
-import { Post } from "./posts";
+import { Post } from "./posts.js";
 
 export type ValidationConfig<T> = {
-    [P in keyof T]?: Validator | Validator[]
+    [P in keyof T]?: Validator //| Validator[]
 }
 
 export type ValidationResult<T> = {
@@ -44,7 +44,7 @@ export class Validators {
         }
     }
     static pattern: ValidatorFactory = (validationPattern: RegExp) => (value: string, field: string) => {
-        if (!value.match(validationPattern)) {
+        if (!validationPattern.test(value)) {
             throw `The field '${field}' does not match pattern '${validationPattern}'`
         }
     }
@@ -56,4 +56,3 @@ export class Validators {
         }
     }
 }
-

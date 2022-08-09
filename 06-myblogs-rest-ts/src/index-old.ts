@@ -3,26 +3,18 @@ import { AppStateStore } from './state-store.js';
 import { BlogsAPI } from './blogs-api-client.js';
 import { Post } from './posts.js';
 import { FormFieldDict, IdType } from './shared-types.js';
-import { FormTextComponent, FormWidget, FormWidgetElements } from './form-builder.js';
-
-
-// interface BlogControllerType {
-//   postsSection: HTMLElement;
-//   erorrsDiv: HTMLElement;
-//   addPostForm: HTMLFormElement;
-//   resetButton: HTMLButtonElement;
-//   init(): Promise<void>;
-// }
 
 
 class BlogsController {
   postsSection = document.getElementById("posts")!;
   erorrsDiv = document.getElementById("errors")!;
-  protected addPostForm = document.getElementById("post-form-container")!;
-  private postForm?: FormWidget<Post>;
+  protected addPostForm = document.getElementById("add-post-form")! as HTMLFormElement;
+  resetButton = document.getElementById("form-reset-button")! as HTMLButtonElement;
 
   async init() {
-    // TODO this.addPostForm.addEventListener('change', this.validateForm, true);
+    this.addPostForm.addEventListener('submit', this.handleSubmitPost);
+    this.resetButton.addEventListener('click', this.resetForm);
+    this.addPostForm.addEventListener('change', this.validateForm, true);
 
     try {
       const allPosts = await BlogsAPI.getAllPosts();
@@ -32,28 +24,7 @@ class BlogsController {
       this.showError(err);
     }
 
-    this.postForm = new FormWidget<Post>(
-      'add-post-form',
-      {
-        id: new FormTextComponent('id', '', '', false, undefined, undefined, undefined, true),
-        title: new FormTextComponent('title', '', '', false),
-        content: new FormTextComponent('content', '', '', true),
-        imageUrl: new FormTextComponent('imageUrl', '', '', false, 'Image URL'),
-        tags: new FormTextComponent('tags', '', '', false),
-        authorId: new FormTextComponent('authorId', '', '', false, 'Author ID'),
-      } as FormWidgetElements<Post>,
-      new Post('', '', [], '', 1, undefined),
-      {}, // validator config
-      (event) => {
-        event.preventDefault();
-        const post = this.postForm!.getFormSnapshot();
-        console.log('Form submitted succssfully:')
-        console.log(post);
-        this.addEditPost(post);
-      }
-    );
-    this.addPostForm.innerHTML = this.postForm.render();
-    this.postForm.makeInteractive();
+    this.initFormState(this.addPostForm);
   }
 
   initFormState(formElement: HTMLFormElement) {
@@ -69,8 +40,12 @@ class BlogsController {
   }
 
   showError(err: any) {
+    if(!err) {
+      this.erorrsDiv.innerHTML = ''
+    } else {
     this.erorrsDiv.innerHTML = `<div>${err}</div>`;
   }
+}
 
   addPostDOM(post: Post) {
     const postElem = document.createElement('article');
@@ -101,7 +76,7 @@ class BlogsController {
       </div>
       <div class="card-action">
         <button class="btn waves-effect waves-light" type="button" id="edit${post.id}">Edit
-          <i class="material-icons right">send</i>
+          <i class="material-icons right">settings</i>
         </button>
         <button class="btn waves-effect waves-light red lighten-1" type="button" id="delete${post.id}">Delete
           <i class="material-icons right">clear</i>
@@ -131,8 +106,11 @@ class BlogsController {
   }
 
 
-  addEditPost = async (post: Post) => {
+  handleSubmitPost = async (event: SubmitEvent) => {
     try {
+      event.preventDefault();
+      const post = this.getPostFormSnapshot();
+      // const post = newPost as unknown as Post;
       if (post.id) {
         const updated = await BlogsAPI.updatePost(post);
         this.updatePostDOM(updated);
@@ -141,9 +119,26 @@ class BlogsController {
         const created = await BlogsAPI.addNewPost(post);
         this.addPostDOM(created);
       }
-      this.postForm?.reset();
+      this.resetForm();
     } catch (err) {
       this.showError(err);
+    }
+  }
+
+  getPostFormSnapshot(): Post {
+    const formData = new FormData(this.addPostForm);
+    const np: FormFieldDict<string> = {};
+    formData.forEach((value, key) => {
+      np[key] = value.toString();
+    })
+    return new Post(np.title, np.content, np.tags.split(/\W+/), np.imageUrl, np.authorId ? parseInt(np.authorId): undefined , parseInt(np.id));
+  }
+
+  resetForm = () => {
+    if (AppStateStore.editedPost) {
+      this.fillPostForm(AppStateStore.editedPost);
+    } else {
+      this.addPostForm.reset();
     }
   }
 
@@ -156,24 +151,36 @@ class BlogsController {
     }
   }
 
-  // validateForm = (event: Event) => {
-  //   const validationResult: ValidationResult<Post> = {};
-  //   const config = AppStateStore.postFormValidationConfig;
-  //   const formSnapshot = this.getPostFormSnapshot();
-  //   let field: keyof ValidationConfig<Post>;
-  //   for (field in config) {
-  //     const validator = config[field];
-  //     if (validator !== undefined) {
-  //       try {
-  //         const fieldValue = formSnapshot[field]
-  //         validator(fieldValue ? fieldValue.toString() : '', field);
-  //       } catch (err) {
-  //         validationResult[field] = [err as string];
-  //       }
-  //     }
-  //   }
-  //   this.showValidationErrors(validationResult);
-  // }
+  validateForm = (event: Event) => {
+    const validationResult: ValidationResult<Post> = {};
+    const config = AppStateStore.postFormValidationConfig;
+    const formSnapshot = this.getPostFormSnapshot();
+    let field: keyof ValidationConfig<Post>;
+    for (field in config) {
+      const validator = config[field];
+      if(validator !== undefined){
+      if(Array.isArray(validator)){
+        for(const element of validator){
+          try{
+            element(formSnapshot[field]!.toString(), field);
+          } catch(err) {
+            if(validationResult[field]=== undefined){
+              validationResult[field] = [] as Array<string>;
+            }
+            validationResult[field]!.push(err as string);
+          }
+        }
+      } else {
+        try{
+          validator(formSnapshot[field]!.toString(), field);
+        } catch(err) {
+          validationResult[field] = [err as string];
+        }
+      }
+      }
+    }
+    this.showValidationErrors(validationResult);
+  }
 
   showValidationErrors(validationResult: ValidationResult<Post>) {
     AppStateStore.postFormErrors = [];
@@ -186,7 +193,7 @@ class BlogsController {
         }
       }
     }
-    this.showError(AppStateStore.postFormErrors);
+    this.showError(AppStateStore.postFormErrors.join(''));
   }
 }
 
