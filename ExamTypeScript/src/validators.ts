@@ -8,25 +8,6 @@ export type ValidationResult<T> = {
     [P in keyof T]?: string[]
 }
 
-export type FormState<T> = {
-    [P in keyof T]?: FormFieldState;
-}
-
-export class FormFieldState {
-    constructor(
-        public valid: ValidStatus,
-        public changed: ChangedStatus
-    ) { }
-}
-
-export enum ValidStatus {
-    INVALID, VALID
-}
-
-export enum ChangedStatus {
-    PRISTINE, DIRTY
-}
-
 export type Validator = (value: string, field: string) => void;
 
 export type ValidatorFactory = (...args: any) => Validator

@@ -1,3 +1,4 @@
+
 export function genRegisterForm() {
   const formInfo = document.getElementById("form") as HTMLElement;
   formInfo.innerHTML = `
@@ -8,7 +9,7 @@ export function genRegisterForm() {
     <div class="section"></div>
 
     <div class="container" >
-      <div class="z-depth-1 grey lighten-4 row" id="register-form" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+      <div class="z-depth-1 grey lighten-4 row" id="register-form">
 
         <form class="col s12" method="post">
           <div class='row'>
@@ -20,13 +21,16 @@ export function genRegisterForm() {
             <div class='input-field col s12'>
               <input class='validate' type='email' name='email' id='email' />
               <label for='email'>Email</label>
+              <span class="email" data-error="Enter a vaild email"></span>
             </div>
           </div>
 
           <div class='row'>
             <div class='input-field col s12'>
               <input class='validate' type='password' name='password' id='password' />
+              <span class="err" data-error="The password should be between 8 and 50 characters"></span>
               <label for='password'>Password</label>
+              
             </div>
           </div>
 
@@ -34,6 +38,7 @@ export function genRegisterForm() {
             <div class='input-field col s12'>
               <input class='validate' type='text' name='username' id='username' />
               <label for='username'>Username</label>
+              <span class="username" data-error="The password should be between 5 and 15 characters"></span>
             </div>
           </div>
         
@@ -41,6 +46,7 @@ export function genRegisterForm() {
             <div class='input-field col s12'>
               <input class='validate' type='text' name='firstName' id='firstName' />
               <label for='firstName'>First Name</label>
+              <span class="password" data-error="The password should be between 2 and 15 characters"></span>
             </div>
           </div>
 
@@ -75,7 +81,7 @@ export function genRegisterForm() {
           <br/>
           <center>
             <div class='row'>
-              <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Register</button>
+              <button type='submit' name='btn_reg' id="btn_reg" class='col s12 btn btn-large waves-effect indigo'>Register</button>
             </div>
           </center>
         </form>
@@ -84,7 +90,9 @@ export function genRegisterForm() {
     <a id="goToLogin">Already have an account? Log in instead.</a>
   </center>
       `;
-    formInfo.querySelector('#goToLogin')!.addEventListener("click", () => genLoginForm())
+    formInfo.querySelector('#goToLogin')!.addEventListener("click", () => genLoginForm());
+    //formInfo.querySelector('#btn_reg')!.addEventListener("click", () => BlogsAPI.addNewUser(formInfo));
+
     
   return formInfo;
 }

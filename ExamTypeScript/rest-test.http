@@ -1,0 +1,19 @@
+GET http://localhost:4000/users HTTP/1.1
+
+###
+
+POST http://localhost:4000/users HTTP/1.1
+content-type: application/json 
+
+{
+     "email": "newuser@user.com", 
+     "password": "1233321",
+     "firstName": "fname",
+     "lastName": "lname",
+     "username": "username",
+     "gender": "MALE",
+     "picUrl": "https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar.png",
+     "description": "this is the new user's description",
+}
+
+###

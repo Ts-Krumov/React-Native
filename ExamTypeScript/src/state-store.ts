@@ -1,14 +1,13 @@
 /* eslint-disable no-useless-escape */
 
 import { User } from "./shared-types.js";
-import { FormState, ValidationConfig, Validators } from "./validators.js";
+import { ValidationConfig, Validators } from "./validators.js";
 
 export interface AppState {
     editedUser: User | undefined;
     allUsers: User[],
     userFormValidationConfig: ValidationConfig<User>,
     userFormErrors: string[],
-    userFormState: FormState<User>
 }
 
 export const AppStateStore: AppState = {
@@ -20,7 +19,7 @@ export const AppStateStore: AppState = {
         firstName: [Validators.required(), Validators.len(2,15)],
         lastName: [Validators.required(), Validators.len(2,15)],
         username: [Validators.required(), Validators.len(5,15)],
+        description: [Validators.required(), Validators.len(1,512)],
     },
     userFormErrors: [],
-    userFormState: {}
 }
