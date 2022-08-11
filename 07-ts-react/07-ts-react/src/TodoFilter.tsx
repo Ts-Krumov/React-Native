@@ -16,7 +16,7 @@ export default function TodoFilter({filter, onFilterChange}: TodoFilterProps) {
         onFilterChange(event.target.value === '0' ? undefined : parseInt(event.target.value))
     }
     return (
-        <select value={filter} onChange={handleFilterChange}>
+        <select id="TodoSelectBar" value={filter} onChange={handleFilterChange}>
             <option value='0'>ALL</option>
             <option value={ToDoStatus.Active}>Active</option>
             <option value={ToDoStatus.Completed}>Completed</option>

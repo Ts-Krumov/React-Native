@@ -1,5 +1,5 @@
 
-import { ToDo, ToDoStatus } from "./todo.model";
+import { ToDo } from "./todo.model";
 import { FilterType, TodoListener } from "./TodoApp";
 import TodoItem from "./TodoItem";
 import './TodoList.css'
@@ -9,6 +9,7 @@ interface Props{
     filter: FilterType;
     onUpdate: TodoListener,
     onDelete: TodoListener,
+    onCancel: TodoListener,
 }
 
 export default function TodoList({todos, filter, ...rest}: Props) {

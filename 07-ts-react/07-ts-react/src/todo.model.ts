@@ -3,7 +3,7 @@ export enum ToDoStatus {
 }
 
 export class ToDo {
-    static nextId =0;
+    static nextId = 0;
     id = ++ToDo.nextId;
     constructor (
         public text: string,

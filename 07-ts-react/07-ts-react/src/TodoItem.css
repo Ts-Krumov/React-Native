@@ -32,9 +32,17 @@
 }
 
 .TodoItem-button.danger {
-    color: red;
+    color: rgb(185, 0, 0);
 }
 
 .TodoItem-button.danger:hover {
     color: red;
+}
+
+.TodoItem-button.feature {
+    color: rgb(255, 255, 255);
+}
+
+.TodoItem-button.feature:hover{
+    color: rgb(210, 210, 210);
 }

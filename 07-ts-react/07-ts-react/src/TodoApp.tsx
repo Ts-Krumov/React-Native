@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './App.css';
 import { ToDo, ToDoStatus } from './todo.model';
 import MOCK_TODOS from './mock-todos';
@@ -64,6 +64,7 @@ class AppClass extends Component<{}, ToDoAppState> {
        filter={this.state.filter} 
        onUpdate={this.handleUpdateTodo}
        onDelete={this.handleDeleteTodo}
+       onCancel={this.handleUpdateTodo}
        />
       </header>
     </div>
