@@ -1,0 +1,9 @@
+.TodoList {
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+}
+
+.TodoList li {
+    text-align: left;
+}
