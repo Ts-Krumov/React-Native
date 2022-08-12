@@ -1,0 +1,7 @@
+.UserList {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-evenly;
+    font-size: 18px;
+}

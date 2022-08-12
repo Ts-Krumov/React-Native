@@ -1,0 +1,23 @@
+.Input-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#UserInput-user-text {
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
+}
+
+label {
+    font-size: 26px;
+}
+
+.UserInputForm {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}

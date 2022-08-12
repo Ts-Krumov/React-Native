@@ -27,7 +27,7 @@ code {
 }
 
 
-input[type=text], input[type=date], select {
+input[type=text], input[type=date],input[type=password], input[type=url] select {
   font-size: 16pt;
   width: 100%;
   padding: 12px 20px;
@@ -103,13 +103,4 @@ input[type=text], input[type=date], select {
 .button5:hover {
   background-color: #555555;
   color: white;
-}
-
-.errors {
-  padding: 5px 20px;
-  border: 1px solid red;
-  border-radius: 5px;
-  background-color: rgb(252, 230, 230);
-  color: red;
-  text-align: center;
 }

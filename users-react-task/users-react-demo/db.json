@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "firstName": "sdr",
+      "lastName": "trayan",
+      "userame": "aas",
+      "password": "1232",
+      "gender": 0,
+      "picUrl": "",
+      "description": "sdsd",
+      "role": 0,
+      "status": 1,
+      "id": 2
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "userame": "",
+      "password": "",
+      "gender": 0,
+      "picUrl": "",
+      "description": "",
+      "role": 0,
+      "status": 1,
+      "id": 1
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "userame": "",
+      "password": "",
+      "gender": 0,
+      "picUrl": "",
+      "description": "",
+      "role": 0,
+      "status": 1,
+      "id": 3
+    }
+  ]
+}

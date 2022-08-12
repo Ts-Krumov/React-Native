@@ -1,8 +1,12 @@
+select {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+}
 .TodoFilter {
-    width: 60%;
+    width: 960px
 }
 
 #TodoSelectBar {
-    width: 60%;
-    padding: 5px;
+    width: 960px;
 }

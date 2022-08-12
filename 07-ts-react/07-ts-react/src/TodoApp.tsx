@@ -1,16 +1,17 @@
 import { Component } from 'react';
-import './App.css';
+import './TodoApp.css';
 import { ToDo, ToDoStatus } from './todo.model';
-import MOCK_TODOS from './mock-todos';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 import TodoFilter from './TodoFilter';
+import { TodosAPI } from './rest-api-client';
 
 export type FilterType = ToDoStatus | undefined;
 
 interface ToDoAppState {
   todos: ToDo[];
   filter: FilterType;
+  errors: string | undefined;
 }
 
 export interface TodoListener {
@@ -23,13 +24,24 @@ export interface FilterChangeListener {
 
 class AppClass extends Component<{}, ToDoAppState> {
   state: Readonly<ToDoAppState> = {
-    todos: MOCK_TODOS,
+    todos: [],
     filter: undefined,
+    errors: undefined,
   }
 
   constructor(props: {}) {
     super(props)
     this.handleUpdateTodo = this.handleUpdateTodo.bind(this);
+  }
+
+  async componentDidMount() {
+    try {
+        const allTodos = await TodosAPI.findAll();
+        this.setState({todos: allTodos, "errors": undefined});
+    } catch(err) {
+        this.setState({errors: (err as any).toString()})
+    }
+    
   }
 
   handleUpdateTodo(todo: ToDo) {
@@ -56,7 +68,8 @@ class AppClass extends Component<{}, ToDoAppState> {
   return (
     <div className="App">
       <header className="App-header">
-       <h2>TODO Demo</h2>
+       <h1>TODO Demo</h1>
+       {this.state.errors && <div className="errors">{this.state.errors}</div>}
        <TodoInput onCreateTodo={this.handleCreateTodo}/>
        <TodoFilter filter={this.state.filter} onFilterChange={this.handleFilterChange}/>
        <TodoList 

@@ -22,7 +22,7 @@ const TodoItem = ({todo, onDelete, onUpdate, onCancel}: TodoItemProps) => {
     <div className="TodoItem" key={todo.id}> 
         <span className="TodoItem-text">
             <span className="TodoItem-id">{todo.id}</span> 
-            {todo.text}
+            {todo.text} -{todo.deadline}
         </span>
         <span className="TodoItem-right">
             <span className="TodoItem-status">{ToDoStatus[todo.status]}</span>
@@ -37,8 +37,6 @@ const TodoItem = ({todo, onDelete, onUpdate, onCancel}: TodoItemProps) => {
              <span className="TodoItem-button fas fa-trash-can danger"
             onClick ={() => onDelete(todo)}></span> 
             }
-            <span className="TodoItem-button fas fa-comment feature"
-            onClick ={handleCancelation}></span> 
         </span>
     </div>
         
