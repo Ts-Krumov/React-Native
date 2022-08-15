@@ -1,40 +1,28 @@
 {
   "users": [
     {
-      "firstName": "sdr",
-      "lastName": "trayan",
-      "userame": "aas",
+      "firstName": "First",
+      "lastName": "User",
+      "userame": "fuser",
       "password": "1232",
       "gender": 0,
-      "picUrl": "",
-      "description": "sdsd",
-      "role": 0,
-      "status": 1,
-      "id": 2
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userame": "",
-      "password": "",
-      "gender": 0,
-      "picUrl": "",
-      "description": "",
+      "picUrl": "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png",
+      "description": "hi i am new user",
       "role": 0,
       "status": 1,
       "id": 1
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "userame": "",
-      "password": "",
-      "gender": 0,
-      "picUrl": "",
-      "description": "",
+      "firstName": "Second",
+      "lastName": "User",
+      "userame": "Suser",
+      "password": "11112222",
+      "gender": 1,
+      "picUrl": "https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png",
+      "description": "Hello from me",
       "role": 0,
       "status": 1,
-      "id": 3
+      "id": 2
     }
   ]
 }

@@ -1,12 +1,15 @@
 .UserItem {
     display: flex;
-    justify-content:  space-between;
+    flex-flow: row wrap;
+    justify-content:space-between;
     padding: 5px;
+    width: 40%;
+    height: 50%;
     background-image: linear-gradient(to bottom right,
      rgba(185, 185, 185, 0.4),
      rgba(112, 111, 111, 0));
-    border: 1px sold rgba(200, 200,200,0.4);
     column-gap: 15px;
+    margin: 5px 5px;
 }
 
 

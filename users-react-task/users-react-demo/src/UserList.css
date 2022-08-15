@@ -1,7 +1,17 @@
-.UserList {
+.UserList-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    width: 70%;
-    justify-content: space-evenly;
+    flex-flow: wrap;
     font-size: 18px;
+}
+
+.UserList-users {
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
 }
