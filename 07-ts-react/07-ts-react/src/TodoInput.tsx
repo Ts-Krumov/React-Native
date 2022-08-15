@@ -19,7 +19,7 @@ interface TodoInputState {
     
     handleTodoSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        this.props.onCreateTodo(new ToDo(this.state.text,  new Date(this.state.date).toDateString()))
+        this.props.onCreateTodo(new ToDo(this.state.text,  new Date(this.state.date).toISOString()))
         this.setState({text : ''})
     }
 
