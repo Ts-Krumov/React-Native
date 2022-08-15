@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useCallback, useState } from 'react'
 import { ToDo } from './todo.model';
 import { TodoListener } from './TodoApp'
 
@@ -18,11 +18,22 @@ const innitialState : TodoInputState = {
 
  function TodoInputFunction ({ onCreateTodo} : TodoInputProps) {
         const [todoFields, setTodoFields] = useState(innitialState);
-    function handleTodoSubmit(event: React.FormEvent) {
-        event.preventDefault();
-        onCreateTodo(new ToDo(todoFields.text,  new Date(todoFields.date).toISOString()));
-        setTodoFields(innitialState);
-    }
+        
+    // function handleTodoSubmit(event: React.FormEvent) {
+    //     event.preventDefault();
+    //     onCreateTodo(new ToDo(todoFields.text,  new Date(todoFields.date).toISOString()));
+    //     setTodoFields(innitialState);
+    // }
+    //UseCallback() function use below
+
+    const handleTodoSubmit = useCallback(
+        (event: React.FormEvent) => {
+            event.preventDefault();
+            onCreateTodo(new ToDo(todoFields.text, new Date(todoFields.date).toISOString()));
+            setTodoFields(innitialState);
+        },
+        [onCreateTodo, todoFields],
+    )
 
     function handleTextChanged(event: React.ChangeEvent<HTMLInputElement>){
         const fieldName = event.target.name as keyof TodoInputState & string;

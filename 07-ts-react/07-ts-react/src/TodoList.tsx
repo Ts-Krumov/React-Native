@@ -1,4 +1,5 @@
 
+import { useMemo } from "react";
 import { ToDo } from "./todo.model";
 import { FilterType, TodoListener } from "./TodoApp";
 import TodoItem from "./TodoItem";
@@ -13,11 +14,14 @@ interface Props{
 }
 
 export default function TodoList({todos, filter, ...rest}: Props) {
-    return <ul className ="TodoList">
+    const visibleTodos = (todos: ToDo[], filter: FilterType) =>
+      todos.filter(todo => !filter ? true : todo.status === filter);
+    const memizedVisibleTodos = useMemo(() => visibleTodos(todos, filter), [todos, filter])
+    return <div className ="TodoList">
         {
-        todos.filter(todo => !filter ? true : todo.status === filter).map(todo =>
-            (<TodoItem todo={todo}  {...rest}/>))
+        memizedVisibleTodos.map(todo =>
+            (<TodoItem todo={todo} key={todo.id} {...rest}/>))
 
         }
-    </ul>
+    </div>
 }
