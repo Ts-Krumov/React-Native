@@ -44,9 +44,6 @@ interface TodoInputState {
     return (
       <form className='TodoInput-form' onSubmit={this.handleTodoSubmit}>
         <label><h2>What to do next?</h2></label>
-        <label> 
-          ID:<input type="text" id="TodoInput-todo-text" name="id" defaultValue={this.state.id} disabled  />
-        </label>
         <label>
             Title:<input type="text" id="TodoInput-todo-text" name="text" value={this.state.text}
             onChange={this.handleTextChanged} />
