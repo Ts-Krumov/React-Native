@@ -11,15 +11,13 @@ import { Book } from "./google-books-api-types.js";
     <img src="${book.volumeInfo.imageLinks.thumbnail}"></img>
     <p>${book.volumeInfo.description.slice(0,300)}
     </p>
-    <button id="favourites-button"> <i class="material-icons" style="font-size:36px">favorite</i></button>
     </section>
     `;
-    
-    
-    const favouritesButton = art.querySelector("#favourites-button") as HTMLElement;
-    favouritesButton.addEventListener("click", async () => {
-       await BooksControler.addToFavourites(book);
-    });
+    //<button id="favourites-button"> <i class="material-icons" style="font-size:36px">favorite</i></button>
+    //const favouritesButton = art.querySelector("#favourites-button") as HTMLElement;
+    //favouritesButton.addEventListener("click", async () => {
+    //    await BooksControler.addToFavourites(book);
+    // });
     
   return art;
 }
